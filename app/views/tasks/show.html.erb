@@ -1,0 +1,17 @@
+<h1><%= @task.title %></h1>
+<div class="detail">
+<p> <%= @task.details %></p>
+</div>
+<div class="completed">
+  <% if @task.completed == true %>
+  <img src="https://img.icons8.com/carbon-copy/100/000000/checked-2.png"> <p>This task is completed</p>
+  <% else %>
+  <img src="https://img.icons8.com/carbon-copy/100/000000/unchecked-checkbox.png"> <p>This task is not completed yet</p>
+  <% end %>
+</div>
+<%= link_to edit_task_path do %>
+  <button type="button" class="btn btn-primary">Update</button>
+<% end %>
+<br/>
+<%= link_to "Back to list", tasks_path %>
+
